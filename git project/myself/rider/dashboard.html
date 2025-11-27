@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="menu-btn"onclick="toggleSidebar()">&#9776;</div>
+    <div class="sidebar" id="sidebar">
+        <h2 class="logo">Rider<span>Hub</span></h2>
+        <ul>
+            <li class="active"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#">My Deliveries</a></li>
+            <li><a href="#">Earnings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="index.html">Back to Main Site</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <header>
+            <h2>Welcome, Riders</h2>
+        </header>
+
+        <section class="stats">
+
+            <div class="card">
+                <h3>Today Deliveries</h3>
+                <p>15</p>
+            </div>
+
+            <div class="card">
+                <h3>Today Earnings</h3>
+                <p>$158</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Order</h3>
+                <p>4</p>
+            </div>
+        </section>
+
+        <section class="recent">
+            <h3>Recent Deliveries</h3>
+            <table>
+                <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Location</th>
+                      <th>Status</th>
+                      <th>Time</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1123</td>
+                        <td>Lekki phase 2</td>
+                        <td>Delivered</td>
+                        <td>12:45pm</td>
+                    </tr>
+
+                    <tr>
+                        <td>#1122</td>
+                        <td>Victoria Island</td>
+                        <td>Delivered</td>
+                        <td>10:45pm</td>
+                    </tr>
+
+                    <tr>
+                        <td>#1121</td>
+                        <td>Ikeja</td>
+                        <td>Delivered</td>
+                        <td>9:45pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive rider site</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--navbar-->
+    <header>
+        <nav class="nav">
+            <h2 class="logo">Rider<span>Site</span>
+            </h2>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#signup">Rider</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+
+                <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!--hero section-->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Fast and Reliable riders at your services</h1>
+            <p>Delivering anything,anywere,and anytime</p>
+            <a href="#signup" class="btn">Join as a Rider</a>
+        </div>
+    </section>
+
+    <!--services-->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-conainer">
+
+            <div class="card">
+                <h3>Parcel Deliver</h3>
+                <p>Quick pickup and delivery of items around your city</p>
+            </div>
+
+            <div class="card">
+                <h3>Food Delivery</h3>
+                <p>Deliver meals from restaurant to customers fast</p>
+            </div>
+
+            <div class="card">
+                <h3>Errand Running</h3>
+                <p>Our riders help you run errands and deliver on time</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--signup section-->
+    <section id="signup" class="signup">
+        <h2>Become a rider</h2>
+
+        <form class="signup-form">
+            <input type="text" placeholder="full name" required> <br><br>
+            <input type="tel" placeholder="phone number" required>  <br><br>
+            <input type="text" placeholder="Bike Model" required>  <br><br>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!--footer-->
+    <footer>
+       <p>&copy 2025 PEE Tech. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

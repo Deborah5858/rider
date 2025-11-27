@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    background: #f5f5f5;
+}
+/*sidebar*/
+.sidebar{
+    width: 250px;
+    background: #111;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: left .3s;
+}
+.sidebar h2{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.sidebar span{
+    color: #ff6600;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar ul li{
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+.sidebar ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.active{
+    color: #f5f5f5;
+}
+/*main*/
+.main{
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+header h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+/*stat card*/
+.stats{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    background: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow:  0 2px 8px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.card p{
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*table*/
+.recent h3{
+    font-size: 30px;
+    margin: 30px;
+    text-align: center;
+}
+table{
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+th td{
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    cursor: pointer;
+}
+th{
+    background: #ff6600;
+    color: #fff;
+    text-align: left;
+}
+/* mobile styles*/
+.menu-btn{
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    font-size: 17px;
+    background: #ff6600;
+    color: #fff;
+    padding: 6px;
+    border-radius: 5px;
+    z-index: 2000;
+}
+@media(max-width: 768px){
+    .sidebar{
+        left: -260px;
+    }
+    .sidebar h2{
+        margin-top: 30px;
+    
+    }
+    .sidebar.active{
+        left: 0;
+    }
+    .main h2{text-align: center;}
+    .main{
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .stats{flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+    
+    
+}
